@@ -3,16 +3,13 @@ $card-width: 200px;
 $gap-size: 48px;
 $cards-counts: 4;
 $gap-counts: $cards-counts - 1;
-$catalog-max-width: $card-width * $cards-counts + $gap-size * $gap-counts;
 $text-hover-color: #34568b;
 
 .catalog {
   display: grid;
   justify-content: center;
-  justify-items: center;
 
   grid-template-columns: repeat(4, $card-width);
-  grid-auto-rows: $card-height;
   gap: $gap-size;
 
   &__card {
@@ -25,7 +22,6 @@ $text-hover-color: #34568b;
     border: 1px solid #ccc;
     border-radius: 5px;
 
-    transform-origin: center;
     transition: color 0.3s, transform 0.3s;
 
     &:hover {
